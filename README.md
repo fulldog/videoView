@@ -4,7 +4,7 @@ Gin + JWT + Zap + GORM + FFmpeg。视频存本地磁盘，元数据存 MySQL。�
 
 ## 环境
 
-- Go 1.23+
+- Go 1.27+
 - MySQL 8（库名 `videoview`）
 - 本机 `ffmpeg`、`ffprobe`（见下方安装）
 

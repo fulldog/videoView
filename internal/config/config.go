@@ -33,9 +33,9 @@ type MySQLConfig struct {
 }
 
 type JWTConfig struct {
-	Secret       string `yaml:"secret"`
-	Expire       time.Duration
-	ExpireString string `yaml:"expire"`
+	Secret       string        `yaml:"secret"`
+	Expire       time.Duration `yaml:"-"`
+	ExpireString string        `yaml:"expire"`
 }
 
 type StorageConfig struct {
@@ -43,11 +43,11 @@ type StorageConfig struct {
 }
 
 type TranscodeConfig struct {
-	Concurrency        int    `yaml:"concurrency"`
-	FFmpeg             string `yaml:"ffmpeg"`
-	FFprobe            string `yaml:"ffprobe"`
-	PollInterval       time.Duration
-	PollIntervalString string `yaml:"poll_interval"`
+	Concurrency        int           `yaml:"concurrency"`
+	FFmpeg             string        `yaml:"ffmpeg"`
+	FFprobe            string        `yaml:"ffprobe"`
+	PollInterval       time.Duration `yaml:"-"`
+	PollIntervalString string        `yaml:"poll_interval"`
 }
 
 func Load(path string) (*Config, error) {

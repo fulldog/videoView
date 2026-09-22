@@ -12,3 +12,4 @@
 !/storage/originals/.gitkeep
 /storage/transcoded/*
 !/storage/transcoded/.gitkeep
+configs/dev.yaml
