@@ -1,0 +1,14 @@
+/bin/
+/tmp/
+*.exe
+*.test
+.idea/
+.vscode/
+.env
+/logs/*.log
+/storage/chunks/*
+!/storage/chunks/.gitkeep
+/storage/originals/*
+!/storage/originals/.gitkeep
+/storage/transcoded/*
+!/storage/transcoded/.gitkeep

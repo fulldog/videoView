@@ -1,0 +1,24 @@
+app:
+  mode: dev
+  addr: ":8080"
+
+log:
+  level: debug
+  dir: logs
+  filename: app
+
+mysql:
+  dsn: "root:root@tcp(127.0.0.1:3306)/videoview?charset=utf8mb4&parseTime=True&loc=Local"
+
+jwt:
+  secret: "change-me-in-production"
+  expire: 24h
+
+storage:
+  root: storage
+
+transcode:
+  concurrency: 2
+  ffmpeg: ffmpeg
+  ffprobe: ffprobe
+  poll_interval: 5s
