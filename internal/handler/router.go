@@ -21,9 +21,7 @@ type Deps struct {
 func RegisterRoutes(r *gin.Engine, d Deps, requestLog gin.HandlerFunc, recovery gin.HandlerFunc) {
 	r.Use(recovery)
 	r.Use(requestLog)
-	if d.IsDev {
-		r.Use(middleware.CORS())
-	}
+	r.Use(middleware.CORS())
 
 	v1 := r.Group("/api/v1")
 	{

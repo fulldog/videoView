@@ -81,8 +81,12 @@ git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
 
 ## 日志
 
-- 级别：`log.level`（debug / info / warn / error）
-- 文件：`logs/app-YYYY-MM-DD.log`，按自然日切割
+- 最低级别：`log.level`（debug / info / warn / error），低于该级别的日志不会写出
+- 按等级分文件，并按自然日切割：
+  - `logs/app-debug-YYYY-MM-DD.log`
+  - `logs/app-info-YYYY-MM-DD.log`
+  - `logs/app-warn-YYYY-MM-DD.log`
+  - `logs/app-error-YYYY-MM-DD.log`（含 error / dpanic / panic / fatal）
 - **仅 `app.mode=dev` 时同时输出控制台**；`prod` 只写文件
 
 ## 启动
